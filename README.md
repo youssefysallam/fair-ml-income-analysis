@@ -9,6 +9,7 @@ The repository includes data preprocessing, modeling code, fairness evaluation, 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 📁 Repository Structure
+```text
 fair-ml-income-analysis/
 |   README.md (this file 😊)
 |   requirements.txt
