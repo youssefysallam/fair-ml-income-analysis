@@ -10,24 +10,82 @@ The repository includes data preprocessing, modeling code, fairness evaluation, 
 
 ## 📁 Repository Structure
 fair-ml-income-analysis/
-├── data/ # Dataset files used for training & CSV outputs used for tables and figures
-│
-├── notebooks/ # Jupyter notebooks for analysis and experiments
-│ ├── data_cleaning.ipynb
-│ ├── model_training.ipynb
-│ └── fairness_evaluation.ipynb
-│
-├── reports/
-│ ├── results/ # Research findings report
-│ ├── Fair_ML_Income_Analysis_Final_Report.pdf
-│ └── latex/ # LaTeX source code for the report
-│ ├── main.tex
-│ ├── references.bib
-│ └── figures/ # Figures imported directly by LaTeX
-│
-│
-├── requirements.txt # Python dependencies
-└── README.md # Project overview (this file 😊)
+|   README.md (this file 😊)
+|   requirements.txt
+|
++---data
+|       adult.csv
+|       baseline_results.csv
+|       metrics_comparison.csv
+|       mitigation_results.csv
+|
++---notebooks
+|   |   01_data_exploration.ipynb
+|   |
+|   \---.ipynb_checkpoints
+|           01_data_exploration-checkpoint.ipynb
+|
+\---reports
+    |   .gitignore
+    |
+    +---latex
+    |   |   main.tex
+    |   |   references.bib
+    |   |
+    |   \---figures
+    |           accuracy_comparison.png
+    |           dp_gap_comparison.png
+    |           eo_gap_comparison.png
+    |           gender_distribution.png
+    |           income_by_gender_raw.png
+    |           income_distribution.png
+    |
+    \---results
+            Fair_ML_Income_Analysis_Final_Report.pdf
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## 📌 Folder Overview
+
+### **data/**
+Contains all dataset files used for training and evaluation, as well as CSV outputs generated during analysis.
+
+- `adult.csv`: raw UCI Adult Income dataset used for model training  
+- `baseline_results.csv`: evaluation metrics for the baseline model  
+- `metrics_comparison.csv`: comparison of performance and fairness metrics across models  
+- `mitigation_results.csv`: results after applying bias mitigation strategies  
+
+
+### **notebooks/**
+Jupyter notebooks documenting the workflow, including:
+- data exploration and preprocessing  
+- model training  
+- fairness metric computation and analysis  
+
+These notebooks provide transparency into the modeling and evaluation process and allow results to be reproduced.
+
+
+### **reports/**
+Materials related to analysis outputs and reporting.
+
+- `reports/results/`: finalized research artifacts  
+  - `Fair_ML_Income_Analysis_Final_Report.pdf`: compiled final research paper  
+
+
+#### **reports/latex/**
+This directory contains the **LaTeX source** used to generate the final research paper.
+
+- `main.tex`: main LaTeX document  
+- `references.bib`: bibliography file  
+- `figures/`: all figures referenced by LaTeX (stored locally to avoid path issues during compilation)  
+
+
+### **requirements.txt**
+Python dependencies required to run the notebooks and reproduce all experiments and figures.
+
+
+### **README.md**
+Project overview, setup instructions, and repository documentation.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -47,7 +105,9 @@ The final report summarizes findings and discusses the limitations of simple mit
 
 ## 📦 Requirements
 
-Install dependencies with:
+All required Python dependencies are listed in `requirements.txt`.
+
+Install them using:
 
 ```bash
 pip install -r requirements.txt
